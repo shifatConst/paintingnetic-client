@@ -10,6 +10,10 @@ import { createContext, useState } from 'react';
 import Dashboard from './components/Dashboard/Dashboard/Dashboard';
 import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
 import Appointment from './components/Appointment/Appointment/Appointment';
+import AllCustomers from './components/AllCustomers/AllCustomers/AllCustomers';
+import AddService from './components/Dashboard/DashboardComponents/AddService/AddService';
+import AddReview from './components/Dashboard/DashboardComponents/AddReview/AddReview';
+import AddAdmin from './components/AddAdmin/AddAdmin';
 
 
 export const UserContext = createContext();
@@ -23,11 +27,23 @@ function App() {
           <Route exact path="/">
             <Home></Home>
           </Route>
-          <PrivateRoute path="/dashboard">
-            <Dashboard></Dashboard>
-          </PrivateRoute>
-          <Route path="/appointment">
+          <Route path="/dashboard/appointment">
             <Appointment></Appointment>
+          </Route>
+          <Route path="/dashboard/allCustomer">
+            <AllCustomers></AllCustomers>
+          </Route>
+          <Route path="/dashboard/addService">
+            <AddService></AddService>
+          </Route>
+          <Route path="/dashboard/addReview">
+            <AddReview></AddReview>
+          </Route>
+          <Route path="/dashboard">
+            <Dashboard></Dashboard>
+          </Route>
+          <Route path="/admin">
+            <AddAdmin></AddAdmin>
           </Route>
           <Route path="/login">
             <Login></Login>

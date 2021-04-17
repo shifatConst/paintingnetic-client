@@ -1,30 +1,15 @@
-import React from 'react';
-import testimonial1 from '../../../../images/testimonial1.jpg'
-import testimonial2 from '../../../../images/testimonial2.jpg'
-import testimonial3 from '../../../../images/testimonial3.jpg'
+import React, { useEffect, useState } from 'react';
 import Testimonial from '../Testimonial/Testimonial';
 
 const Testimonials = () => {
-    const testimonialData = [
-        {
-            quote: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic non architecto nobis, adipisci recusandae repellat accusantium consequuntur, qui nisi deserunt blanditiis mollitia, illo! ',
-            name: 'Wilson Harry',
-            from: 'California',
-            img: testimonial1
-        },
-        {
-            quote: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic non architecto nobis, adipisci recusandae repellat accusantium consequuntur, qui nisi deserunt blanditiis mollitia, illo! ',
-            name: 'Ema Gomez',
-            from: 'California',
-            img: testimonial2
-        },
-        {
-            quote: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic non architecto nobis, adipisci recusandae repellat accusantium consequuntur, qui nisi deserunt blanditiis mollitia, illo! ',
-            name: 'Aliza Farari',
-            from: 'California',
-            img: testimonial3
-        }
-    ]
+    const [testimonialData, setTestimonialData] = useState([]);
+    const api = "http://localhost:5000/reviews";
+    useEffect(() => {
+        fetch(api)
+            .then(res => res.json())
+            .then(data => setTestimonialData(data));
+    }, [])
+    
     return (
         <section className="testimonials my-5 py-5">
             <div className="container">

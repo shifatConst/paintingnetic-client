@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Navbar from '../../Shared/Navbar/Navbar';
+import Sidebar from '../../Dashboard/DashboardComponents/Sidebar/Sidebar';
 import AppointmentHeader from '../AppointmentComponents/AppointmentHeader/AppointmentHeader';
 import BookAppointment from '../AppointmentComponents/BookAppointment/BookAppointment';
 
@@ -10,11 +10,21 @@ const Appointment = () => {
         setSelectedDate(date);
     }
     return (
-        <div>
-            <Navbar></Navbar>
-            <AppointmentHeader handleDateChange={handleDateChange}></AppointmentHeader>
-            <BookAppointment date={selectedDate}></BookAppointment>
-        </div>
+        // <div>
+        //     <AppointmentHeader handleDateChange={handleDateChange}></AppointmentHeader>
+        //     <BookAppointment date={selectedDate}></BookAppointment>
+        // </div>
+        <section>
+            <div className="container-fluid row">
+                <div className="col-md-2">
+                    <Sidebar></Sidebar>
+                </div>
+                <div className="col-md-10">
+                    <AppointmentHeader handleDateChange={handleDateChange}></AppointmentHeader>
+                    <BookAppointment date={selectedDate}></BookAppointment>
+                </div>
+            </div>
+        </section>
     );
 };
 

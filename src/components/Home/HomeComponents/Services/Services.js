@@ -1,27 +1,14 @@
-import React from 'react';
-import service1 from '../../../../images/service1.jpg'
-import service2 from '../../../../images/service2.jpg'
-import service3 from '../../../../images/service3.jpg'
+import React, { useEffect, useState } from 'react';
 import ServiceDetail from '../ServiceDetail/ServiceDetail';
 
 const Services = () => {
-    const serviceData = [
-        {
-            name: 'Residential Project',
-            description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, fuga ',
-            img: service1
-        },
-        {
-            name: 'Restoration Project',
-            description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, fuga',
-            img: service2
-        },
-        {
-            name: 'Commercial Project',
-            description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, fuga',
-            img: service3
-        }
-    ]
+    const [services, setServices] = useState([]);
+    const api = "http://localhost:5000/services";
+    useEffect(() => {
+        fetch(api)
+            .then(res => res.json())
+            .then(data => setServices(data));
+    }, [])
     return (
         <section className="services-container mt-5">
             <div className="text-center">
@@ -31,7 +18,7 @@ const Services = () => {
             <div className="d-flex justify-content-center">
             <div className="w-75 row mt-5 pt-5">
                 {
-                    serviceData.map(service => <ServiceDetail service={service} key={service.name}></ServiceDetail>)
+                    services.map(service => <ServiceDetail service={service} key={service._id}></ServiceDetail>)
                 }
             </div>
         </div>
