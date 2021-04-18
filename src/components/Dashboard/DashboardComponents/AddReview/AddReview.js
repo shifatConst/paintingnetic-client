@@ -2,6 +2,8 @@ import React from 'react';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useForm } from "react-hook-form";
+import Navbar from '../../../Shared/Navbar/Navbar';
+import Sidebar from '../Sidebar/Sidebar';
 
 const AddReview = () => {
     const { register, handleSubmit, watch, errors } = useForm();
@@ -42,9 +44,13 @@ const AddReview = () => {
             });
     }
     return (
-        <div>
-            <div className="col-sm-8">
+        <div className="row">
+            <div className="col-sm-2">
+                <Sidebar></Sidebar>
+            </div>
+            <div className="col-sm-10">
                 <div className="text-center m-3">
+                    <h3>Please share your experience with us</h3>
                     <form className="border p-4 form-style" onSubmit={handleSubmit(onSubmit)}>
                         <input className="m-1" name="name" placeholder="Name" ref={register} />
                         <br />

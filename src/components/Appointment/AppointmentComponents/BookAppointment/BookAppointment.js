@@ -7,6 +7,7 @@ const bookingData = [
         id: 1,
         subject: 'Residential Interior',
         visitingHour: '8:00 AM - 9:00 AM',
+        Price: "$199",
         totalSpace: 5
     },
     {
@@ -14,6 +15,7 @@ const bookingData = [
         id: 2,
         subject: 'Residential Exterior',
         visitingHour: '10:50 AM - 11:30 AM',
+        Price: "$299",
         totalSpace: 5
     },
     {
@@ -21,6 +23,7 @@ const bookingData = [
         id: 3,
         subject: 'Commercial Painting',
         visitingHour: '5:00 PM - 6:00 PM',
+        Price: "$559",
         totalSpace: 5
     },
     {
@@ -28,6 +31,7 @@ const bookingData = [
         id: 4,
         subject: 'WallPaper Removal',
         visitingHour: '7:00 AM - 8:30 AM',
+        Price: "$99",
         totalSpace: 5
     },
     {
@@ -35,6 +39,7 @@ const bookingData = [
         id: 5,
         subject: 'Water Damage Repair',
         visitingHour: '8:00 AM - 9:00 AM',
+        Price: "$199",
         totalSpace: 5
     },
     {
@@ -42,6 +47,7 @@ const bookingData = [
         id: 6,
         subject: 'Drywall Installation',
         visitingHour: '8:00 AM - 9:00 AM',
+        Price: "$299",
         totalSpace: 5
     }
 ]

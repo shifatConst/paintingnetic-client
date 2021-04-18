@@ -4,7 +4,7 @@ const Testimonial = (props) => {
 
     const { quote, name, from, imageURL } = props.testimonial;
     return (
-        <div className="col-sm-4 card shadow-sm">
+        <div style={{backgroundColor: "#fbe0c4"}} className="col-sm-4 card shadow-sm">
             <div className="card-body">
                 <p className="card-text text-center">{quote}</p>
             </div>

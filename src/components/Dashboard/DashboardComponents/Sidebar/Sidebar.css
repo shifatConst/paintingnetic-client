@@ -1,5 +1,5 @@
 .sidebar{
-    background-image: linear-gradient(40deg, #19d3ae,#0fcfec);
+    background-color: #4E262F;
     position: fixed;
 }
 .sidebar li{
@@ -11,4 +11,7 @@
 }
 .sidebar svg{
     margin-right: 5px;
+}
+.style{
+    text-decoration: none;
 }

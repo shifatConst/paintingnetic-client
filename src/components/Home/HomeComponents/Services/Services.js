@@ -10,13 +10,13 @@ const Services = () => {
             .then(data => setServices(data));
     }, [])
     return (
-        <section className="services-container mt-5">
+        <section style={{backgroundColor:"#fbe0c4"}} className="mt-5 pb-5">
             <div className="text-center">
-                <h5 style={{color: '#1CC7C1'}}>OUR SERVICES</h5>
-                <h2>Services We Provide</h2>
+                <h2 style={{color: '#331A20'}}>OUR SERVICES</h2>
+                <h5>Services We Provide</h5>
             </div>
             <div className="d-flex justify-content-center">
-            <div className="w-75 row mt-5 pt-5">
+            <div className="w-75 row mt-2 pt-5">
                 {
                     services.map(service => <ServiceDetail service={service} key={service._id}></ServiceDetail>)
                 }

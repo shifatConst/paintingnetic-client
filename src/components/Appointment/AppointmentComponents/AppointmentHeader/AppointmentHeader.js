@@ -6,7 +6,7 @@ import appointment from '../../../../images/appointment.jpg'
 const AppointmentHeader = ({ handleDateChange }) => {
     return (
         <main style={{ height: '400px' }} className="row text-center">
-            <h3 style={{ color: '#3A4256' }}>Appointment</h3>
+            <h3 style={{ color: '#3A4256' }}>Select Your Available Date</h3>
             <div className="col-md-12 d-flex justify-content-center">
                 <Calendar
                     onChange={handleDateChange}

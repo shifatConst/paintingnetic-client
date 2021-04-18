@@ -14,7 +14,7 @@ const Testimonials = () => {
         <section className="testimonials my-5 py-5">
             <div className="container">
                 <div className="section-header">
-                    <h5 className="text-primary text-uppercase">Testimonial</h5>
+                    <h5 className="text-uppercase">Testimonial</h5>
                     <h1>What Our customers <br /> Says </h1>
                 </div>
                 <div className="row card-deck mt-5">

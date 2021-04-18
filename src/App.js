@@ -14,6 +14,9 @@ import AllCustomers from './components/AllCustomers/AllCustomers/AllCustomers';
 import AddService from './components/Dashboard/DashboardComponents/AddService/AddService';
 import AddReview from './components/Dashboard/DashboardComponents/AddReview/AddReview';
 import AddAdmin from './components/AddAdmin/AddAdmin';
+import ManageService from './components/Dashboard/DashboardComponents/ManageService/ManageService';
+import UserOrder from './components/Dashboard/DashboardComponents/UserOrder/UserOrder';
+import AboutUs from './components/AboutUs/AboutUs';
 
 
 export const UserContext = createContext();
@@ -27,24 +30,33 @@ function App() {
           <Route exact path="/">
             <Home></Home>
           </Route>
-          <Route path="/dashboard/appointment">
+          <Route path="/about-us">
+            <AboutUs></AboutUs>
+          </Route>
+          <PrivateRoute path="/dashboard/appointment">
             <Appointment></Appointment>
-          </Route>
-          <Route path="/dashboard/allCustomer">
+          </PrivateRoute>
+          <PrivateRoute path="/dashboard/allCustomer">
             <AllCustomers></AllCustomers>
-          </Route>
-          <Route path="/dashboard/addService">
+          </PrivateRoute>
+          <PrivateRoute path="/dashboard/addService">
             <AddService></AddService>
-          </Route>
-          <Route path="/dashboard/addReview">
+          </PrivateRoute>
+          <PrivateRoute path="/dashboard/addReview">
             <AddReview></AddReview>
-          </Route>
-          <Route path="/dashboard">
-            <Dashboard></Dashboard>
-          </Route>
-          <Route path="/admin">
+          </PrivateRoute>
+          <PrivateRoute path="/dashboard/manageService">
+            <ManageService></ManageService>
+          </PrivateRoute>
+          <PrivateRoute path="/dashboard/admin">
             <AddAdmin></AddAdmin>
-          </Route>
+          </PrivateRoute>
+          <PrivateRoute path="/dashboard/bookingList">
+            <UserOrder></UserOrder>
+          </PrivateRoute>
+          <PrivateRoute exact path="/dashboard">
+            <Dashboard></Dashboard>
+          </PrivateRoute>
           <Route path="/login">
             <Login></Login>
           </Route>

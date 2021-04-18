@@ -8,7 +8,7 @@ const HeaderMain = () => {
             <div className="col-sm-6 text-center">
                 <h1>BRING YOUR HOME <br /> TO LOVELY COLORS</h1>
                 <p className="px-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit deserunt pariatur incidunt deleniti consectetur dicta!</p>
-                <Link to="/dashboard/appointment" className="btn btn-primary">Color Now</Link>
+                <Link to="/dashboard/appointment" className="btn btn-brand btn-text">Color Now</Link>
             </div>
             <div className="col-sm-6 text-center">
                 <img className="img-fluid" src={paintingHeader} alt=""/>

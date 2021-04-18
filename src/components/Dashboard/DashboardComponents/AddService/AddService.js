@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useForm } from "react-hook-form";
+import Sidebar from '../Sidebar/Sidebar';
 // import './AddProducts.css'
 
 const AddProducts = () => {
@@ -42,17 +43,23 @@ const AddProducts = () => {
     }
 
     return (
-        <div className="col-sm-8">
-            <div className="text-center m-3">
-                <form className="border p-4 form-style" onSubmit={handleSubmit(onSubmit)}>
-                    <input className="m-1" name="name" placeholder="Service name" ref={register} />
-                    <br />
-                    <input className="m-1" name="description" placeholder="Description" ref={register({ required: true })} />
-                    <br />
-                    <input className="m-1" name="price" type="file" onChange={handleImageUpload} />
-                    <br />
-                    <input className="btn btn-primary" type="submit" />
-                </form>
+        <div className="row">
+            <div className="col-sm-2">
+                <Sidebar></Sidebar>
+            </div>
+            <div className="col-sm-10">
+                <div className="text-center m-3">
+                    <h2>Add Another Service</h2>
+                    <form className="border p-4 form-style" onSubmit={handleSubmit(onSubmit)}>
+                        <input className="m-1" name="name" placeholder="Service name" ref={register} />
+                        <br />
+                        <input className="m-1" name="description" placeholder="Description" ref={register({ required: true })} />
+                        <br />
+                        <input className="m-1" name="price" type="file" onChange={handleImageUpload} />
+                        <br />
+                        <input className="btn btn-primary" type="submit" />
+                    </form>
+                </div>
             </div>
         </div>
     );

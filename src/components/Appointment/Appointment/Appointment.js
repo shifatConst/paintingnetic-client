@@ -10,21 +10,15 @@ const Appointment = () => {
         setSelectedDate(date);
     }
     return (
-        // <div>
-        //     <AppointmentHeader handleDateChange={handleDateChange}></AppointmentHeader>
-        //     <BookAppointment date={selectedDate}></BookAppointment>
-        // </div>
-        <section>
-            <div className="container-fluid row">
+            <div className="row">
                 <div className="col-md-2">
                     <Sidebar></Sidebar>
                 </div>
-                <div className="col-md-10">
+                <div className="col-md-10 mt-5">
                     <AppointmentHeader handleDateChange={handleDateChange}></AppointmentHeader>
                     <BookAppointment date={selectedDate}></BookAppointment>
                 </div>
             </div>
-        </section>
     );
 };
 

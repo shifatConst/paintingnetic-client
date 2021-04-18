@@ -28,9 +28,9 @@ const TeamMembers = () => {
     ]
     // console.log(membersData);
     return (
-        <section>
+        <section style={{backgroundColor: "#fbe0c4"}} className="p-3">
             <div className="container">
-                <h5 className="text-center text-primary mb-5">Our Team</h5>
+                <h1 className="text-center mb-5">OUR TEAM</h1>
                 <div className="row">
                     {
                         membersData.map(member => <TeamMember member={member}></TeamMember>)

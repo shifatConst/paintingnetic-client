@@ -5,8 +5,8 @@ const Contact = () => {
         <section className="contact my-5 py-5">
             <div className="container">
                 <div className="section-header text-center text-white mb-5">
-                    <h5 className="text-primary">Contact</h5>
-                    <h1>Always  connect with us</h1>
+                    <h5>Contact</h5>
+                    <h1>Any Query! Mail Us</h1>
                 </div>
                 <div className="col-md-9 mx-auto">
                     <form action="">
