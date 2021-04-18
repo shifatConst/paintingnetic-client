@@ -3,7 +3,7 @@ import Testimonial from '../Testimonial/Testimonial';
 
 const Testimonials = () => {
     const [testimonialData, setTestimonialData] = useState([]);
-    const api = "http://localhost:5000/reviews";
+    const api = "https://powerful-waters-62812.herokuapp.com/reviews";
     useEffect(() => {
         fetch(api)
             .then(res => res.json())

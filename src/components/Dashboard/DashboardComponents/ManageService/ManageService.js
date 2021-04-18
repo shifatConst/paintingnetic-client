@@ -7,7 +7,7 @@ const ManageService = () => {
     const [info, setInfo] = useState({});
     const [toggle, setToggle] = useState(false);
 
-    const api = "http://localhost:5000/services";
+    const api = "https://powerful-waters-62812.herokuapp.com/services";
     useEffect(() => {
         fetch(api)
             .then(res => res.json())
@@ -15,7 +15,7 @@ const ManageService = () => {
     }, [])
 
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/deleteServices/${id}`, {
+        fetch(`https://powerful-waters-62812.herokuapp.com/deleteServices/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

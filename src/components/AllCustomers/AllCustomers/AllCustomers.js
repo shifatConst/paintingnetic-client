@@ -6,7 +6,7 @@ const AllCustomers = () => {
     const [info, setInfo] = useState({});
     const [appointments, setAppointments] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/appointments')
+        fetch('https://powerful-waters-62812.herokuapp.com/appointments')
             .then(res => res.json())
             .then(data => setAppointments(data))
     }, [])
@@ -18,7 +18,7 @@ const AllCustomers = () => {
     console.log(info);
 
     const handleUpdate = (id) => {
-        fetch(`http://localhost:5000/update/${id}`, {
+        fetch(`https://powerful-waters-62812.herokuapp.com/update/${id}`, {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(info)

@@ -3,7 +3,7 @@ import ServiceDetail from '../ServiceDetail/ServiceDetail';
 
 const Services = () => {
     const [services, setServices] = useState([]);
-    const api = "http://localhost:5000/services";
+    const api = "https://powerful-waters-62812.herokuapp.com/services";
     useEffect(() => {
         fetch(api)
             .then(res => res.json())

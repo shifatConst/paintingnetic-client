@@ -15,7 +15,7 @@ const AddProducts = () => {
             imageURL: imageURL
         };
 
-        const url = `http://localhost:5000/addService`;
+        const url = `https://powerful-waters-62812.herokuapp.com/addService`;
         fetch(url, {
             method: 'POST',
             headers: {
