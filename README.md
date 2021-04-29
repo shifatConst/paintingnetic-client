@@ -1,19 +1,19 @@
 # PAININGNETIC
 
-Paintingnetic is a service web app for painting and repearing home and commercial.
+Paintingnetic is a service web app for painting and repairing homes and commercials.
 
 ## Features & Implementation
 
-* Managed all the route with React router.
-* Implemented CRUD operation for backend with Express.js and MongoDB for database.
+* Managed all the routes with React router.
+* Implemented CRUD operation for backend with Express.js and MongoDB for the database.
 * Implemented login system for users with Firebase Auth.
-* Built different Dashboard for user and admin.
-* User can give review of a service and these will show on the home page dynamically.
-* Users can see all the products that have been ordered by himself.
+* Built different Dashboards for user and admin.
+* Users can give reviews of services and these will show on the home page dynamically.
+* Users can see all the products that have been ordered by themselves.
 * An admin can add more services and these will show on the home page dynamically.
 * An admin can add another admin.
 * An admin can add more products to the database and delete a product as well.
-* An admin can see all the booking from all the user.
+* An admin can see all the bookings from all the users.
 
 
 ## Technologies
