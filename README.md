@@ -39,6 +39,8 @@ Paintingnetic is a service web app for painting and repearing home and commercia
 
 ## Future Improvement
 
-Want to implement more responsive for mobile and improve the security. 
+- Will improve for authentication and security
+- Want to give more flexibility to the admin so that they can update the booking status from the dashboard.
+- Will make more responsive for mobile
 
 [live Link](https://paintingnetic.web.app/)
